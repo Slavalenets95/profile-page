@@ -8,40 +8,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Страница профиля</title>
 <link href="style.css" rel="stylesheet"></head>
 
 <body class="body">
     <div class="opacity hidden"></div>
-    <header class="header">
-        <div class="container-fluid">
-            <div class="row no-gutters">
-                <div class="col d-flex align-items-center">
-                    <a href="#" class="header__logo">
-                        <picture>
-                            <source srcset="./img/logo-md.svg" media="(min-width: 568px)">
-                            <img src="./img/logo-sm.svg" alt="Some picture">
-                        </picture>
-                    </a>
-                    <h1 class="header__title title min-768-visible">Личный кабинет</h1>
-                    <div class="header__ui d-flex align-items-center ml-auto">
-                        <button class="header__btn btn-sm btn min-768-visible" type="button">Помощь</button>
-                        <img src="./img/avatar-img.png" alt="avatar" class="header__avatar">
-                        <button class="header__menu max-768-visible"></button>
-                    </div>
+    <mainheader><header class="header">
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col d-flex align-items-center">
+                <a href="#" class="header__logo">
+                    <picture>
+                        <source srcset="./img/logo-md.svg" media="(min-width: 568px)">
+                        <img src="./img/logo-sm.svg" alt="Some picture">
+                    </picture>
+                </a>
+                <h1 class="header__title title min-768-visible">Личный кабинет</h1>
+                <div class="header__ui d-flex align-items-center ml-auto">
+                    <button class="header__btn btn-sm btn min-768-visible" type="button">Помощь</button>
+                    <img src="./img/avatar-img.png" alt="avatar" class="header__avatar">
+                    <button class="header__menu max-768-visible">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header></mainheader>
     <section class="content d-flex">
-        <div class="sidebar sidebar-hidden" data-folded="false">
+        <sidebar><div class="sidebar sidebar-hidden" data-folded="false">
             <div class="container-fluid">
                 <div class="row no-gutters">
                     <div class="col be-static">
                         <nav class="nav text-nowrap d-flex flex-column align-items-center">
                             <ul class="nav__list nav__list--bordered">
                                 <li class="nav__list-item">
-                                    <a href="#" class="nav__list-link nav__list-link--active profile">
+                                    <a href="#" class="nav__list-link profile">
                                         <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path class="nav__list-svg" d="M10.6313 18.0754L10.6313 18.0754L10.6329 18.0765C10.7247 18.1377 10.8311 18.1792 10.9228 18.1792C11.0355 18.1792 11.1415 18.1412 11.2386 18.0765L11.2387 18.0766L11.2444 18.0724L14.9929 15.3117C17.624 16.7246 19.4507 19.4297 19.6289 22.5822H1.95848C2.13783 19.4548 3.98862 16.7483 6.59842 15.3107L10.6313 18.0754ZM10.7936 13.1762C5.31008 13.1762 0.85 17.6363 0.85 23.1198C0.85 23.4094 1.09804 23.6574 1.38761 23.6574H20.1738C20.4631 23.6574 20.711 23.4098 20.7114 23.1205C20.7377 17.6363 16.277 13.1762 10.7936 13.1762ZM10.7936 14.2514C11.8695 14.2514 12.9227 14.4451 13.8741 14.8117L10.9198 16.9922L7.74879 14.8077C8.69417 14.4436 9.72205 14.2514 10.7936 14.2514Z
                                                    M8.43573 4.89364C7.61256 5.22804 7.05568 5.45427 6.09653 5.58094C6.55023 3.50346 8.40563 1.95106 10.6386 1.95106C12.485 1.95106 14.0764 3.01468 14.8436 4.5541C14.7162 4.48251 14.5865 4.40828 14.4627 4.33403L14.4623 4.33376C13.9204 4.0112 13.4553 3.74238 13.0628 3.56096C12.676 3.38218 12.3345 3.2758 12.0462 3.30548C11.0809 3.38211 10.4948 3.75024 9.91224 4.11616C9.87824 4.13751 9.84425 4.15886 9.8102 4.18014C9.78011 4.19866 9.74993 4.2173 9.71962 4.23603C9.40853 4.42824 9.08333 4.62918 8.69585 4.7888L8.56736 4.8402L8.56736 4.8402L8.56672 4.84046C8.52227 4.85848 8.47863 4.87621 8.43573 4.89364ZM12.1215 4.35392L12.1215 4.35396L12.1251 4.35363C12.135 4.35274 12.1616 4.35418 12.2108 4.36704C12.2575 4.37924 12.315 4.39913 12.3822 4.42642C12.5167 4.48098 12.6795 4.56066 12.8556 4.65348C13.1084 4.78676 13.3797 4.94245 13.6239 5.08257C13.7198 5.13756 13.8114 5.19016 13.8962 5.23806C14.4395 5.56873 14.9155 5.84705 15.2884 5.97415C15.3273 6.19409 15.3467 6.41377 15.3467 6.63328C15.3467 9.21255 13.2427 11.3413 10.6386 11.3413C8.04495 11.3413 5.9482 9.25543 5.9307 6.66594C7.25854 6.52894 7.95915 6.24281 8.93932 5.81559L9.06639 5.76476C9.56411 5.56567 9.94576 5.31965 10.2872 5.09958C10.3109 5.08429 10.3344 5.06913 10.3577 5.05412C10.9261 4.69248 11.3883 4.4028 12.1215 4.35392ZM10.6386 12.4166C13.8224 12.4166 16.4219 9.81701 16.4219 6.63328C16.4219 3.44955 13.8224 0.85 10.6386 0.85C7.45492 0.85 4.85537 3.44955 4.85537 6.63328C4.85537 9.8433 7.45537 12.4166 10.6386 12.4166Z" fill="#4E4E4E" stroke="#4E4E4E" stroke-width="0.3"/>
@@ -61,8 +66,12 @@
                                     </a>
                                 </li>
                                 <li class="nav__list-item">
-                                    <a href="#" class="nav__list-link services">
-                                        <svg width="23px" heigth="22px" viewBox="0 -31 512.00026 512" xmlns="http://www.w3.org/2000/svg"><path class="nav__list-svg" fill="4E4E4E" d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg>
+                                    <a href="#" class="nav__list-link nav__list-link--active services">
+                                        <svg width="23px" heigth="22px" viewBox="0 -31 512.00026 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="nav__list-svg" fill="4E4E4E" d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/>
+                                            <path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/>
+                                            <path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/>
+                                        </svg>
                                         <span class="nav__link-txt">Дополнительные услуги</span>
                                     </a>
                                 </li>
@@ -126,8 +135,8 @@
                                         <span class="nav__link-txt">Список покупателей</span>
                                     </a>
                                 </li>
-                                <li class="nav__list-item">
-                                    <a href="#" class="nav__list-link instructions">
+                                <li class="nav__list-item nav__list-item--drop">
+                                    <button href="#" class="nav__list-link instructions">
                                         <svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path class="nav__list-svg" d="M18.2422 3.02824H14.2195V1.39366C14.2195 1.10086 13.9686 0.85 13.6758 0.85H7.45599C7.1632 0.85 6.91234 1.10086 6.91234 1.39366V3.02824H2.65336C1.65199 3.02824 0.85 3.83023 0.85 4.83161V24.6195C0.85 25.6209 1.65199 26.4229 2.65336 26.4229H18.2685C19.2698 26.4229 20.0718 25.6209 20.0718 24.6195V4.83161H20.0719L20.0718 4.82732C20.0433 3.83011 19.2444 3.02824 18.2422 3.02824ZM7.45599 8.41955H13.6758C13.9686 8.41955 14.2195 8.16869 14.2195 7.8759V6.32004H16.6751V22.9998H4.22053V6.34629H6.91234V7.8759C6.91234 8.20143 7.16985 8.41955 7.45599 8.41955ZM13.1321 1.93732V5.77639V7.33224H7.99965V5.77639V3.54566V1.93732H13.1321ZM18.9583 24.5932C18.9583 24.9828 18.6318 25.3093 18.2422 25.3093H2.65336C2.26382 25.3093 1.93732 24.9828 1.93732 24.5932V4.83161C1.93732 4.44206 2.26382 4.11556 2.65336 4.11556H6.91234V5.25897H3.67688C3.38408 5.25897 3.13322 5.50984 3.13322 5.80263V23.5697C3.13322 23.8625 3.38408 24.1134 3.67688 24.1134H17.2187C17.5115 24.1134 17.7624 23.8625 17.7624 23.5697V5.80263C17.7624 5.50984 17.5115 5.25897 17.2187 5.25897H14.2195V4.11556H18.2422C18.6318 4.11556 18.9583 4.44206 18.9583 4.83161V24.5932Z
                                                    M4.8915 12.7052C4.8915 12.998 5.14237 13.2488 5.43516 13.2488H15.5391C15.8319 13.2488 16.0827 12.998 16.0827 12.7052C16.0827 12.4124 15.8319 12.1615 15.5391 12.1615H5.43516C5.14237 12.1615 4.8915 12.4124 4.8915 12.7052Z
@@ -135,7 +144,20 @@
                                                    M15.5391 17.8031H5.43516C5.14237 17.8031 4.8915 18.054 4.8915 18.3468C4.8915 18.6396 5.14237 18.8904 5.43516 18.8904H15.5391C15.8319 18.8904 16.0827 18.6396 16.0827 18.3468C16.0827 18.054 15.8319 17.8031 15.5391 17.8031Z" fill="#4E4E4E" stroke="#4E4E4E" stroke-width="0.3"/>
                                         </svg>
                                         <span class="nav__link-txt">Инструкции</span>
-                                    </a>
+                                        <svg class="instructions-svg" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect class="nav__list-svg" x="13.3247" y="1.84082" width="8.81723" height="1.68818" rx="0.844088" transform="rotate(135 13.3247 1.84082)" fill="#4E4E4E" stroke="#4E4E4E" stroke-width="0.5"/>
+                                            <rect class="nav__list-svg" x="1.84009" y="0.646447" width="8.81723" height="1.68818" rx="0.844088" transform="rotate(45 1.84009 0.646447)" fill="#4E4E4E" stroke="#4E4E4E" stroke-width="0.5"/>
+                                        </svg>    
+                                    </button>
+                                    <div class="nav__drop-down drop-down" data-show="false">
+                                        <ul class="drop-down__list">
+                                            <li class="drop-down__list-item"><a class="drop-down__list-link" href="$">Советы</a></li>
+                                            <li class="drop-down__list-item"><a class="drop-down__list-link" href="$">Настройки</a></li>
+                                            <li class="drop-down__list-item"><a class="drop-down__list-link" href="$">Подменю1</a></li>
+                                            <li class="drop-down__list-item"><a class="drop-down__list-link" href="$">Подменю2</a></li>
+                                            <li class="drop-down__list-item"><a class="drop-down__list-link" href="$">Подменю3</a></li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
                             <button class="nav__expand-btn">
@@ -161,7 +183,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div></sidebar>
         <main class="main w-100">
             <div class="container-fluid">
                 <div class="row no-gutters">
@@ -255,31 +277,31 @@
             </div>
         </main>
     </section>
-    <footer class="footer">
-        <div class="container-md">
-            <div class="row no-gutters">
-                <div class="col-6 col-md-9 d-flex flex-column">
-                    <p>© BuyBuyHouse, 2021</p>
-                    <ul class="footer__list">
-                        <li class="footer__list-item"><a href="$" class="footer__list-link">Контакты</a></li>
-                        <li class="footer__list-item"><a href="$" class="footer__list-link">Вакансии</a></li>
-                        <li class="footer__list-item"><a href="$" class="footer__list-link">Правила пользования
-                                сайтом</a></li>
-                        <li class="footer__list-item"><a href="$" class="footer__list-link">Политика
-                                конфиденциальности</a></li>
-                    </ul>
-                    <p class="footer__license">При использовании материалов гиперссылка обязательна.</p>
-                </div>
-                <div class="col-6 col-md-3 d-flex justify-content-around">
-                    <ul class="social-list d-flex align-items-center align-items-sm-start">
-                        <li class="social-list__item"><a href="$" class="social-list__link vk"></a></li>
-                        <li class="social-list__item"><a href="$" class="social-list__link facebook"></a></li>
-                        <li class="social-list__item"><a href="$" class="social-list__link youtube"></a></li>
-                    </ul>
-                </div>
+    <mainfooter><footer class="footer">
+    <div class="container-md">
+        <div class="row no-gutters">
+            <div class="col-6 col-md-9 d-flex flex-column">
+                <p>© BuyBuyHouse, 2021</p>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a href="$" class="footer__list-link">Контакты</a></li>
+                    <li class="footer__list-item"><a href="$" class="footer__list-link">Вакансии</a></li>
+                    <li class="footer__list-item"><a href="$" class="footer__list-link">Правила пользования
+                            сайтом</a></li>
+                    <li class="footer__list-item"><a href="$" class="footer__list-link">Политика
+                            конфиденциальности</a></li>
+                </ul>
+                <p class="footer__license">При использовании материалов гиперссылка обязательна.</p>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-around">
+                <ul class="social-list d-flex align-items-center align-items-sm-start">
+                    <li class="social-list__item"><a href="$" class="social-list__link vk"></a></li>
+                    <li class="social-list__item"><a href="$" class="social-list__link facebook"></a></li>
+                    <li class="social-list__item"><a href="$" class="social-list__link youtube"></a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+    </div>
+</footer></mainfooter>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="./js/bundle.js"></script></body>
+      <script src="./js/bundle.js"></script></body>
 </html>
